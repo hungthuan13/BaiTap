@@ -6,16 +6,17 @@ const App = () => {
   const [email, setEmail] = useState("");
 
   const onPress = () => {
-    Alert.alert(`Đăng nhập thành công với tên người dùng ${email} và mật khẩu ${password}`);
+    Alert.alert(`Đã được chấp nhận ${email} mật khẩu ${password}`);
   };
 
   return (
     <ImageBackground
-      source={require('./assets/img/123.jpg')}
+      source={require('./assets/img/111.jpeg')}
       resizeMode="cover"
       style={myStyle.backgroundImage}
     >
       <View style={myStyle.container}>
+        <Image source={require('./assets/img/hungthuan.png')} style={myStyle.img}/>
         <TextInput
           style={myStyle.TextInput}
           placeholder="Nhập tên người dùng"
@@ -45,6 +46,7 @@ const myStyle = StyleSheet.create({
     flex: 1,
     padding: 10,
     justifyContent: 'center'
+    
   },
   backgroundImage: {
     flex: 1,
@@ -76,6 +78,10 @@ const myStyle = StyleSheet.create({
     letterSpacing: 0.25,
     color: 'white',
   },
+  img:{
+    width:340,
+    height:200,
+  }
 });
 
 export default App;
